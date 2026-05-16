@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahannya Sehat, Tapi Kenapa Burger Tidak? | KBDI</title>
+<meta name="description" content="Daging, sayur, roti — semua terkesan sehat. Tapi kenapa burger bisa jadi bom kalori? Jawabannya ada pada kombinasi, proses, dan industri di baliknya.">
+<link rel="icon" href="https://edukbdi.github.io/logo_KBDI/kbdi_trans.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:      #080c0a;
+  --bg2:     #0d120f;
+  --surface: #162018;
+  --surface2:#1e2a20;
+  --border:  rgba(232,119,34,0.13);
+  --border2: rgba(255,255,255,0.06);
+  --accent:  #e87722;
+  --accent2: #ff9944;
+  --text:    #e8e6e0;
+  --text2:   #a8a49c;
+  --text3:   #6b6760;
+}
+html.light {
+  --bg:      #f5f0e8;
+  --bg2:     #ede8df;
+  --surface: #ffffff;
+  --surface2:#f5f0e8;
+  --border:  rgba(232,119,34,0.18);
+  --border2: rgba(0,0,0,0.07);
+  --accent:  #c45e10;
+  --accent2: #a04800;
+  --text:    #0f0d0a;
+  --text2:   #2a2520;
+  --text3:   #5a5550;
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.8;
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── persis pola Artemis */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-bottom: 3px solid rgba(232,119,34,0.35);
+}
+.hero {
+  --text:  #e8e6e0;
+  --text2: #a8a49c;
+  --text3: #6b6760;
+  background: linear-gradient(150deg, #0e1a0a 0%, #060c05 55%, #0b1208 100%) !important;
+}
+html.light .hero {
+  background: linear-gradient(150deg, #e8f0d8 0%, #f0f5e8 50%, #dde8cc 100%) !important;
+  border-bottom-color: rgba(100,140,60,0.4);
+  --text:  #1a2010;
+  --text2: #3a4830;
+  --text3: #6a7860;
+}
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(circle, rgba(232,119,34,0.11) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.5) 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.5) 75%, transparent 100%);
+}
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 50% 60% at 18% 55%, rgba(80,180,60,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 45% at 72% 30%, rgba(232,119,34,0.05) 0%, transparent 55%);
+}
+
+/* Thermometer — persis .hero-moon Artemis */
+.hero-therm {
+  position: absolute;
+  right: clamp(20px, 4%, 60px);
+  bottom: clamp(40px, 6vw, 80px);
+  width: min(220px, 22vw);
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 30px rgba(232,119,34,0.10));
+}
+html.light .hero-therm {
+  filter: drop-shadow(0 0 20px rgba(100,150,60,0.2));
+}
+.hero-therm svg { width:100%; height:auto; }
+
+/* Hero content — persis .hero-content Artemis */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(20px,6vw,80px) clamp(50px,8vw,80px);
+  max-width: 700px;
+  animation: fadeUp 0.8s 0.1s both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #ff9944; margin-bottom: 1.2rem;
+}
+.hero-eyebrow::before {
+  content: ''; display: inline-block;
+  width: 28px; height: 2px; background: #ff9944; border-radius: 2px;
+}
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  line-height: 0.93; letter-spacing: 0.01em;
+  color: #e8e6e0; margin-bottom: 0.7rem;
+}
+.hero-title span { color: #ff9944; }
+.hero-subtitle {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-weight: 300; font-style: italic;
+  color: #a8a49c; max-width: 500px;
+  margin-bottom: 2rem; line-height: 1.7;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;
+}
+.hero-meta-item {
+  font-family: 'DM Sans', sans-serif; font-size: 0.78rem;
+  color: #6b6760; display: flex; align-items: center; gap: 6px;
+}
+.hero-meta-item svg { opacity: 0.6; }
+.hero-tag {
+  display: inline-block; padding: 4px 12px;
+  border: 1px solid rgba(232,119,34,0.25); border-radius: 20px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+  font-weight: 500; letter-spacing: 0.08em;
+  color: #ff9944; text-transform: uppercase;
+}
+
+/* ── ARTICLE ── */
+.article-wrap {
+  max-width: 780px; margin: 0 auto; padding: 2rem 20px 3rem;
+}
+.section-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: 0.04em; color: var(--text);
+  margin: 2.5rem 0 1rem; padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  display: flex; align-items: center; gap: 14px;
+}
+.sec-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  background: rgba(232,119,34,0.1);
+  border: 1px solid rgba(232,119,34,0.2);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.sec-icon svg { width:18px; height:18px; }
+.article-body p {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(0.95rem, 2vw, 1.06rem);
+  font-weight: 300; color: var(--text);
+  line-height: 1.85; margin-bottom: 1.4rem;
+}
+html.light .article-body p {
+  font-weight: 400;
+  color: #111008;
+}
+html.light .article-body strong { color: #0a0806; }
+html.light .article-body em { color: #2a2520; }
+.article-body strong { font-weight: 600; color: var(--text); }
+.article-body em { font-style: italic; color: var(--text2); }
+.pull-quote {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, var(--surface2), var(--surface));
+  padding: 1.4rem 1.8rem; margin: 2.5rem 0;
+  border-radius: 0 12px 12px 0; position: relative;
+  box-shadow: inset 0 0 0 1px var(--border2);
+}
+.pull-quote::before {
+  content: '"'; font-family: 'Source Serif 4', serif;
+  font-size: 5rem; color: var(--accent); opacity: 0.15;
+  position: absolute; top: -10px; left: 12px; line-height: 1; pointer-events: none;
+}
+.pull-quote p {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-style: italic; font-weight: 300;
+  color: var(--text2) !important; line-height: 1.75; margin: 0 !important;
+}
+.highlight-box {
+  background: linear-gradient(135deg, rgba(232,119,34,0.06), rgba(232,119,34,0.02));
+  border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0; padding: 1.4rem 1.6rem; margin: 2rem 0;
+}
+.highlight-box h4 {
+  font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent2); margin-bottom: 0.8rem;
+}
+.highlight-box p {
+  font-family: 'Source Serif 4', serif; font-size: 0.97rem;
+  font-weight: 300; color: var(--text2) !important;
+  line-height: 1.7; margin: 0 !important;
+}
+.highlight-box strong { color: var(--accent) !important; font-weight: 600; }
+.infographic {
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 16px; padding: 24px 20px 20px; margin: 2rem 0; overflow: hidden;
+}
+/* Light mode infografis — latar lebih terang */
+html.light .infographic { background: #f0ece4; border-color: rgba(0,0,0,0.1); }
+html.light .infographic svg rect[fill="#3d2010"] { fill: #f0e0c8; }
+html.light .infographic svg rect[fill="#2a1000"] { fill: #ffe0c0; }
+html.light .infographic svg rect[fill="#1a0d2e"] { fill: #e8d8f8; }
+html.light .infographic svg rect[fill="#0d1a2e"] { fill: #d0e8ff; }
+html.light .infographic svg rect[fill="#1a0000"] { fill: #ffe0e0; }
+html.light .infographic svg text[fill="#e8c090"] { fill: #5a3010; }
+html.light .infographic svg text[fill="#a08060"] { fill: #8a6040; }
+html.light .infographic svg text[fill="#ff8844"] { fill: #c04400; }
+
+/* Light mode hero eyebrow & meta */
+html.light .hero-eyebrow { color: #4a7020 !important; }
+html.light .hero-eyebrow::before { background: #4a7020 !important; }
+html.light .hero-title { color: #1a2010 !important; }
+html.light .hero-title span { color: #7a4010 !important; }
+html.light .hero-subtitle { color: #3a4830 !important; }
+html.light .hero-meta-item { color: #5a6850 !important; }
+html.light .hero-tag { color: #7a4010 !important; border-color: rgba(120,60,10,0.3) !important; }
+.infographic-title {
+  font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+}
+.closing-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: 0.04em; color: var(--text); margin-bottom: 1rem;
+}
+.closing p {
+  font-family: 'Source Serif 4', serif; font-size: 0.97rem;
+  font-weight: 300; color: var(--text2); line-height: 1.8; margin-bottom: 1rem;
+}
+.closing p:last-child { margin-bottom: 0; }
+.sources {
+  padding-top: 2rem; border-top: 1px solid var(--border2); margin-top: 0.5rem;
+}
+
+
+.sources h3 {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem;
+  letter-spacing: 0.08em; color: var(--text3); margin-bottom: 1rem;
+}
+.sources ol { padding-left: 1.4rem; }
+.sources ol li {
+  font-family: 'DM Sans', sans-serif; font-size: 0.78rem;
+  color: var(--text3); line-height: 1.6; margin-bottom: 0.4rem;
+}
+.sources ol li a { color: var(--accent2); text-decoration: none; }
+.sources ol li a:hover { text-decoration: underline; }
+.reveal {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* Nomor seksi dekoratif */
+.section-heading .sec-icon {
+  background: linear-gradient(135deg, rgba(232,119,34,0.2), rgba(232,119,34,0.05));
+  border: 1px solid rgba(232,119,34,0.3);
+  box-shadow: 0 2px 8px rgba(232,119,34,0.1);
+}
+
+/* Closing box lebih vivid */
+.closing {
+  background: linear-gradient(135deg, var(--surface), var(--surface2));
+  border-radius: 20px;
+  padding: 36px 32px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  margin-top: 3rem; margin-bottom: 1.5rem;
+  position: relative; overflow: hidden;
+}
+.closing::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232,119,34,0.05), transparent);
+  pointer-events: none;
+}
+
+/* Infografis judul lebih menonjol */
+.infographic-title {
+  font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border2);
+}
+@media (max-width: 640px) {
+  .hero { min-height: 88vh; align-items: flex-end; padding-top: 0; }
+  .hero-content { padding: clamp(30px,6vw,60px) 5% clamp(50px,8vw,70px); position: relative; z-index: 3; max-width: 100%; }
+  .hero-therm {
+    width: 36vw; right: 1%;
+    bottom: clamp(44px,7vw,58px);
+    opacity: 0.55; z-index: 1;
+  }
+  .article-wrap { padding: 2rem 5% 2rem; }
+  .closing { padding: 24px 20px; }
+  .section-heading { font-size: 1.6rem; }
+}
+@media (max-width: 400px) {
+  .hero-therm { width: 40vw; opacity: 0.45; right: -1%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+
+  <!-- Thermometer absolute kanan — persis hero-moon Artemis -->
+  <div class="hero-therm">
+    <svg viewBox="0 0 280 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tF" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#cc2200"/>
+          <stop offset="30%"  stop-color="#e87722"/>
+          <stop offset="62%"  stop-color="#f5c400"/>
+          <stop offset="100%" stop-color="#4caf50"/>
+        </linearGradient>
+        <radialGradient id="bG" cx="40%" cy="35%" r="55%">
+          <stop offset="0%" stop-color="#ff5533"/>
+          <stop offset="100%" stop-color="#aa1100"/>
+        </radialGradient>
+        <filter id="tGl">
+          <feGaussianBlur stdDeviation="6" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <clipPath id="tC">
+          <rect x="110" y="70" width="44" height="390" rx="22"/>
+        </clipPath>
+      </defs>
+
+      <!-- Tanda seru -->
+      <circle cx="132" cy="36" r="22" fill="rgba(204,34,0,0.15)" stroke="rgba(204,34,0,0.4)" stroke-width="1.5"/>
+      <text x="132" y="44" font-family="DM Sans,sans-serif" font-size="24" fill="#cc2200" text-anchor="middle" font-weight="900">!</text>
+
+      <!-- Labels zona -->
+      <line x1="156" y1="98"  x2="176" y2="98"  stroke="rgba(204,34,0,0.6)"   stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="182" y="93"  font-family="DM Sans,sans-serif" font-size="16" fill="#cc2200" font-weight="700">BAHAYA</text>
+      <text x="182" y="112" font-family="DM Sans,sans-serif" font-size="13" fill="#886655">800+ kkal</text>
+
+      <line x1="156" y1="228" x2="176" y2="228" stroke="rgba(232,119,34,0.6)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="182" y="223" font-family="DM Sans,sans-serif" font-size="16" fill="#e87722" font-weight="700">WASPADA</text>
+      <text x="182" y="242" font-family="DM Sans,sans-serif" font-size="13" fill="#886655">500–800 kkal</text>
+
+      <line x1="156" y1="358" x2="176" y2="358" stroke="rgba(76,175,80,0.6)"  stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="182" y="353" font-family="DM Sans,sans-serif" font-size="16" fill="#4caf50" font-weight="700">NORMAL</text>
+      <text x="182" y="372" font-family="DM Sans,sans-serif" font-size="13" fill="#886655">&lt;500 kkal</text>
+
+      <!-- Skala kiri -->
+      <line x1="108" y1="98"  x2="94"  y2="98"  stroke="rgba(204,34,0,0.7)"   stroke-width="2"/>
+      <line x1="108" y1="228" x2="94"  y2="228" stroke="rgba(232,119,34,0.7)" stroke-width="2"/>
+      <line x1="108" y1="358" x2="94"  y2="358" stroke="rgba(76,175,80,0.7)"  stroke-width="2"/>
+      <line x1="108" y1="163" x2="100" y2="163" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <line x1="108" y1="293" x2="100" y2="293" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+      <!-- Tabung -->
+      <rect x="110" y="70" width="44" height="390" rx="22" fill="#080c06" stroke="rgba(232,119,34,0.2)" stroke-width="1.5"/>
+
+      <!-- Cairan naik-turun animasi berulang -->
+      <g clip-path="url(#tC)">
+        <rect x="110" y="460" width="44" height="0" fill="url(#tF)">
+          <animate attributeName="y"
+            values="460;70;200;70"
+            dur="6s" repeatCount="indefinite"
+            calcMode="spline"
+            keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+            keyTimes="0;0.35;0.65;1"/>
+          <animate attributeName="height"
+            values="0;390;260;390"
+            dur="6s" repeatCount="indefinite"
+            calcMode="spline"
+            keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+            keyTimes="0;0.35;0.65;1"/>
+        </rect>
+      </g>
+
+      <!-- Highlight -->
+      <rect x="116" y="74" width="10" height="382" rx="5" fill="rgba(255,255,255,0.06)"/>
+
+      <!-- Bulb -->
+      <circle cx="132" cy="482" r="40" fill="#080c06" stroke="rgba(232,119,34,0.15)" stroke-width="1.5"/>
+      <circle cx="132" cy="482" r="40" fill="url(#bG)" filter="url(#tGl)"/>
+      <circle cx="121" cy="470" r="11" fill="rgba(255,255,255,0.13)"/>
+
+      <!-- Label bawah -->
+      <text x="132" y="548" font-family="DM Sans,sans-serif" font-size="14" fill="rgba(232,119,34,0.6)" text-anchor="middle" letter-spacing="0.1em">KALORI</text>
+      <text x="132" y="566" font-family="DM Sans,sans-serif" font-size="14" fill="rgba(232,119,34,0.6)" text-anchor="middle" letter-spacing="0.1em">BURGER</text>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Kesehatan &amp; Gizi</div>
+    <h1 class="hero-title">BAHANNYA<br>SEHAT,<br>TAPI KENAPA<br><span>BURGER TIDAK?</span></h1>
+    <p class="hero-subtitle">Daging, selada, tomat, roti — semuanya terdengar wajar. Tapi begitu disatukan jadi burger, ahli gizi mulai angkat alis. Ada apa sebenarnya?</p>
+    <div class="hero-meta">
+      <span class="hero-tag">Kesehatan</span>
+      <span class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        7 menit baca
+      </span>
+      <span class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        KBDI — Sains Populer
+      </span>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ══ ARTIKEL ══ -->
+<main class="article-wrap">
+<div class="article-body">
+
+  <div class="pull-quote reveal">
+    <p>Coba pikirkan: daging adalah protein, selada penuh vitamin, tomat kaya antioksidan, dan roti memberi energi. Lalu mengapa begitu semuanya bersatu di atas nampan, para ahli gizi buru-buru memberi peringatan?</p>
+  </div>
+
+  <!-- S1: KALORI -->
+  <h2 class="section-heading reveal">
+    <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#e87722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg></span>
+    Masalah Pertama: Kalori yang Menumpuk
+  </h2>
+
+  <p class="reveal">Inilah yang disebut para ahli gizi sebagai <em>caloric density stacking</em> — bahan-bahan yang masing-masing punya kalori "wajar" bertransformasi menjadi bom kalori ketika digabungkan. Sebuah burger standar restoran cepat saji rata-rata mengandung 700 hingga 1.000 kilokalori, bahkan bisa lebih.</p>
+  <p class="reveal">Kebutuhan kalori harian orang dewasa aktif rata-rata 2.000–2.500 kkal. Artinya, satu sajian burger sudah menyumbang sepertiga hingga separuh kebutuhan energi harian — belum termasuk kentang goreng atau minuman manis.</p>
+
+  <!-- Burger exploded SVG -->
+  <div class="infographic reveal">
+    <div class="infographic-title">Ilustrasi — Anatomi Lapisan Burger</div>
+    <svg viewBox="0 0 360 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto;">
+      <defs>
+        <radialGradient id="bTG" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#d4874a"/><stop offset="60%" stop-color="#b5622a"/><stop offset="100%" stop-color="#8b4513"/></radialGradient>
+        <linearGradient id="bTS" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c97a38"/><stop offset="100%" stop-color="#8b4513"/></linearGradient>
+        <linearGradient id="saG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#cc3333"/></linearGradient>
+        <linearGradient id="leG" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#6abf5e"/><stop offset="100%" stop-color="#3d8b37"/></linearGradient>
+        <linearGradient id="toG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff6347"/><stop offset="100%" stop-color="#cc2200"/></linearGradient>
+        <linearGradient id="chG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffd166"/><stop offset="100%" stop-color="#e8a020"/></linearGradient>
+        <linearGradient id="paG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8b5e3c"/><stop offset="40%" stop-color="#6b3d1e"/><stop offset="100%" stop-color="#4a2510"/></linearGradient>
+        <linearGradient id="bBG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4874a"/><stop offset="100%" stop-color="#a05520"/></linearGradient>
+        <filter id="ds"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="rgba(0,0,0,0.4)"/></filter>
+        <filter id="dss"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/></filter>
+      </defs>
+      <!-- BUN ATAS -->
+      <g filter="url(#ds)">
+        <ellipse cx="160" cy="56" rx="88" ry="46" fill="url(#bTG)"/>
+        <path d="M72,56 Q72,80 160,82 Q248,80 248,56" fill="url(#bTS)"/>
+        <ellipse cx="160" cy="80" rx="88" ry="12" fill="#a05520"/>
+        <ellipse cx="138" cy="40" rx="6" ry="3.5" fill="#f0c070" opacity="0.8" transform="rotate(-15,138,40)"/>
+        <ellipse cx="162" cy="30" rx="6" ry="3.5" fill="#f0c070" opacity="0.8" transform="rotate(5,162,30)"/>
+        <ellipse cx="186" cy="42" rx="6" ry="3.5" fill="#f0c070" opacity="0.8" transform="rotate(20,186,42)"/>
+      </g>
+      <line x1="248" y1="54" x2="274" y2="44" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="278" y="40" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Bun Atas</text>
+      <text x="278" y="55" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">IG tinggi</text>
+      <!-- SAUS -->
+      <g filter="url(#dss)" transform="translate(0,92)">
+        <path d="M80,12 Q88,4 160,6 Q232,4 240,12 L244,20 Q236,30 160,28 Q84,30 76,20 Z" fill="url(#saG)" opacity="0.92"/>
+      </g>
+      <line x1="244" y1="106" x2="274" y2="98" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="278" y="94" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Saus</text>
+      <text x="278" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">Gula tersembunyi</text>
+      <!-- SELADA -->
+      <g filter="url(#dss)" transform="translate(0,136)">
+        <path d="M66,18 Q80,6 116,9 Q140,13 160,7 Q180,13 204,9 Q236,6 254,16 L256,26 Q236,36 204,32 Q180,36 160,28 Q140,36 116,32 Q80,36 64,26 Z" fill="url(#leG)"/>
+      </g>
+      <line x1="66" y1="156" x2="40" y2="146" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="2" y="142" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Selada</text>
+      <text x="2" y="157" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">Serat &amp; vitamin</text>
+      <!-- TOMAT -->
+      <g filter="url(#dss)" transform="translate(0,188)">
+        <ellipse cx="160" cy="14" rx="86" ry="13" fill="url(#toG)" opacity="0.95"/>
+        <ellipse cx="130" cy="14" rx="9" ry="6" fill="rgba(255,255,255,0.12)"/>
+        <ellipse cx="160" cy="11" rx="9" ry="6" fill="rgba(255,255,255,0.12)"/>
+        <ellipse cx="190" cy="14" rx="9" ry="6" fill="rgba(255,255,255,0.12)"/>
+      </g>
+      <line x1="246" y1="202" x2="274" y2="194" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="278" y="190" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Tomat</text>
+      <text x="278" y="205" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">Likopen</text>
+      <!-- KEJU -->
+      <g filter="url(#dss)" transform="translate(0,224)">
+        <path d="M74,8 L246,8 L250,22 Q232,32 160,28 Q88,32 70,22 Z" fill="url(#chG)"/>
+        <path d="M86,22 Q82,34 86,44" stroke="#ffd166" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+        <path d="M234,22 Q238,34 234,44" stroke="#ffd166" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+      </g>
+      <line x1="74" y1="236" x2="40" y2="228" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="2" y="224" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Keju Olahan</text>
+      <text x="2" y="239" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">Lemak jenuh</text>
+      <!-- PATTY -->
+      <g filter="url(#ds)" transform="translate(0,276)">
+        <path d="M72,10 Q74,2 160,4 Q246,2 248,10 L250,28 Q248,40 160,42 Q72,40 70,28 Z" fill="url(#paG)"/>
+        <path d="M98,11 Q100,26 98,39" stroke="rgba(0,0,0,0.3)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <path d="M132,9 Q134,24 132,40" stroke="rgba(0,0,0,0.3)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <path d="M166,9 Q168,24 166,40" stroke="rgba(0,0,0,0.3)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <path d="M200,11 Q202,26 200,39" stroke="rgba(0,0,0,0.3)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      </g>
+      <line x1="250" y1="298" x2="274" y2="290" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="278" y="286" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Patty</text>
+      <text x="278" y="301" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">HCA &amp; PAH</text>
+      <!-- BUN BAWAH -->
+      <g filter="url(#ds)" transform="translate(0,340)">
+        <ellipse cx="160" cy="12" rx="92" ry="12" fill="url(#bBG)"/>
+        <path d="M68,12 L68,26 Q70,42 160,44 Q250,42 252,26 L252,12" fill="url(#bBG)"/>
+        <ellipse cx="160" cy="44" rx="92" ry="9" fill="#7a3d10" opacity="0.6"/>
+      </g>
+      <line x1="70" y1="366" x2="40" y2="378" stroke="#e87722" stroke-width="1" stroke-dasharray="4,3" opacity="0.8"/>
+      <text x="2" y="374" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" font-weight="700">Bun Bawah</text>
+      <text x="2" y="389" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c">Tepung olahan</text>
+      <!-- Total -->
+      <rect x="80" y="408" width="200" height="48" rx="10" fill="rgba(232,119,34,0.12)" stroke="rgba(232,119,34,0.3)" stroke-width="1"/>
+      <text x="180" y="430" font-family="DM Sans,sans-serif" font-size="13" fill="#e87722" text-anchor="middle" font-weight="700">Total: 700–1.000+ kkal</text>
+      <text x="180" y="447" font-family="DM Sans,sans-serif" font-size="11" fill="#a8a49c" text-anchor="middle">dalam satu sajian burger</text>
+    </svg>
+  </div>
+
+  <p class="reveal">Riset dari National Heart, Lung, and Blood Institute (NHLBI) mencatat ukuran porsi makanan cepat saji meningkat drastis sejak 1970-an — sebuah pergeseran yang oleh para peneliti disebut <em>portion size normalisation</em>.</p>
+
+  <!-- S2: HCA/PAH -->
+  <h2 class="section-heading reveal">
+    <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#e87722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+    Masalah Kedua: Api yang Mengubah Daging
+  </h2>
+
+  <p class="reveal">Daging sapi memang kaya protein, zat besi, dan vitamin B12. Masalahnya muncul ketika daging dipanggang pada suhu sangat tinggi. Pada suhu di atas 150°C, asam amino dan kreatin bereaksi membentuk <strong>HCA (Heterocyclic Amines)</strong>. Ketika lemak menetes ke bara dan asapnya menempel kembali ke daging, terbentuk <strong>PAH (Polycyclic Aromatic Hydrocarbons)</strong>.</p>
+
+  <!-- Infografis HCA/PAH — vertikal, font besar -->
+  <div class="infographic reveal">
+    <div class="infographic-title">Infografis — Bagaimana HCA &amp; PAH Terbentuk</div>
+    <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto;">
+      <defs>
+        <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e87722"/>
+        </marker>
+      </defs>
+      <!-- Daging -->
+      <rect x="50" y="8" width="200" height="60" rx="12" fill="#3d2010" stroke="rgba(232,119,34,0.3)" class="node-daging" stroke-width="1.5"/>
+      <text x="150" y="34" font-family="DM Sans,sans-serif" font-size="15" fill="#e8c090" text-anchor="middle" font-weight="700">🥩 Daging Segar</text>
+      <text x="150" y="54" font-family="DM Sans,sans-serif" font-size="13" fill="#a08060" text-anchor="middle">Protein + kreatin</text>
+      <!-- Panah -->
+      <line x1="150" y1="70" x2="150" y2="100" stroke="#e87722" stroke-width="2" marker-end="url(#ar)"/>
+      <!-- Panas -->
+      <rect x="50" y="102" width="200" height="68" rx="12" fill="#2a1000" stroke="rgba(255,68,0,0.4)" stroke-width="1.5" class="node-heat"/>
+      <text x="150" y="132" font-family="DM Sans,sans-serif" font-size="22" text-anchor="middle">🔥</text>
+      <text x="150" y="156" font-family="DM Sans,sans-serif" font-size="14" fill="#ff8844" text-anchor="middle" font-weight="700">Suhu &gt;150°C</text>
+      <!-- Cabang -->
+      <line x1="150" y1="172" x2="150" y2="196" stroke="#e87722" stroke-width="2"/>
+      <line x1="80"  y1="196" x2="220" y2="196" stroke="#e87722" stroke-width="2"/>
+      <line x1="80"  y1="196" x2="80"  y2="216" stroke="#e87722" stroke-width="2" marker-end="url(#ar)"/>
+      <line x1="220" y1="196" x2="220" y2="216" stroke="#e87722" stroke-width="2" marker-end="url(#ar)"/>
+      <!-- HCA -->
+      <rect x="10" y="218" width="130" height="64" rx="10" fill="#1a0d2e" stroke="rgba(150,80,255,0.35)" stroke-width="1.5"/>
+      <text x="75" y="244" font-family="DM Sans,sans-serif" font-size="15" fill="#c080ff" text-anchor="middle" font-weight="700">HCA</text>
+      <text x="75" y="262" font-family="DM Sans,sans-serif" font-size="12" fill="#8060aa" text-anchor="middle">Heterocyclic</text>
+      <text x="75" y="276" font-family="DM Sans,sans-serif" font-size="12" fill="#8060aa" text-anchor="middle">Amines</text>
+      <!-- PAH -->
+      <rect x="160" y="218" width="130" height="64" rx="10" fill="#0d1a2e" stroke="rgba(80,150,255,0.35)" stroke-width="1.5"/>
+      <text x="225" y="244" font-family="DM Sans,sans-serif" font-size="15" fill="#80c0ff" text-anchor="middle" font-weight="700">PAH</text>
+      <text x="225" y="262" font-family="DM Sans,sans-serif" font-size="12" fill="#5090aa" text-anchor="middle">Polycyclic</text>
+      <text x="225" y="276" font-family="DM Sans,sans-serif" font-size="12" fill="#5090aa" text-anchor="middle">Aromatics</text>
+      <!-- Panah ke hasil -->
+      <line x1="75"  y1="284" x2="150" y2="334" stroke="#e87722" stroke-width="2" marker-end="url(#ar)"/>
+      <line x1="225" y1="284" x2="150" y2="334" stroke="#e87722" stroke-width="2" marker-end="url(#ar)"/>
+      <!-- Hasil -->
+      <rect x="50" y="336" width="200" height="68" rx="12" fill="#1a0000" stroke="rgba(255,60,60,0.4)" stroke-width="1.5"/>
+      <text x="150" y="362" font-family="DM Sans,sans-serif" font-size="15" fill="#ff6060" text-anchor="middle" font-weight="700">⚠ Karsinogenik</text>
+      <text x="150" y="382" font-family="DM Sans,sans-serif" font-size="13" fill="#884444" text-anchor="middle">Klasifikasi IARC</text>
+      <text x="150" y="398" font-family="DM Sans,sans-serif" font-size="13" fill="#884444" text-anchor="middle">Group 2A (WHO)</text>
+    </svg>
+  </div>
+
+  <p class="reveal">Badan Internasional untuk Penelitian Kanker (IARC), lembaga di bawah WHO, mengklasifikasikan HCA dan PAH sebagai kemungkinan karsinogen pada manusia (Grup 2A). Ini bukan berarti sekali makan burger langsung memicu kanker — melainkan konsumsi berulang jangka panjang meningkatkan risiko, terutama untuk kanker kolorektal.</p>
+
+  <div class="highlight-box reveal">
+    <h4>Poin Kunci</h4>
+    <p>Daging yang dimasak dengan suhu rendah — direbus, dikukus, atau dipanggang ringan — secara signifikan lebih rendah kandungan HCA-nya. <strong>Metode memasak jauh lebih penting dari sekadar "makan daging atau tidak."</strong></p>
+  </div>
+
+  <!-- S3: ULTRA-PROCESSING -->
+  <h2 class="section-heading reveal">
+    <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#e87722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg></span>
+    Masalah Ketiga: Bahan Asli vs. Industri
+  </h2>
+
+  <p class="reveal">Ada perbedaan besar antara burger buatan sendiri dan burger restoran cepat saji — meskipun keduanya memakai bahan yang "sama". Burger industri menggunakan bahan yang telah melalui proses pengolahan berlapis.</p>
+
+  <!-- Infografis bahan — font besar, warna aman dark+light -->
+  <div class="infographic reveal">
+    <div class="infographic-title">Infografis — Bahan Segar vs. Bahan Industri</div>
+    <svg viewBox="0 0 340 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <!-- Header -->
+      <rect x="4"   y="4"  width="140" height="32" rx="8" fill="rgba(60,180,80,0.15)" stroke="rgba(60,180,80,0.3)" stroke-width="1.5"/>
+      <text x="74"  y="25" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50" text-anchor="middle" font-weight="700">🥗 Buatan Sendiri</text>
+      <rect x="156" y="4"  width="140" height="32" rx="8" fill="rgba(232,119,34,0.12)" stroke="rgba(232,119,34,0.3)" stroke-width="1.5"/>
+      <text x="226" y="25" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722" text-anchor="middle" font-weight="700">🏭 Cepat Saji</text>
+      <line x1="150" y1="44" x2="150" y2="305" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="5,4"/>
+
+      <!-- KEJU -->
+      <text x="4"   y="58" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">KEJU</text>
+      <text x="156" y="58" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">KEJU</text>
+      <text x="4"   y="76" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50">Keju alami, susu murni</text>
+      <text x="156" y="76" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722">Olahan + Na fosfat</text>
+      <line x1="4" y1="88" x2="296" y2="88" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- SAUS -->
+      <text x="4"   y="104" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">SAUS</text>
+      <text x="156" y="104" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">SAUS</text>
+      <text x="4"   y="122" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50">Tomat segar, minyak</text>
+      <text x="156" y="122" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722">Fruktosa + pengawet</text>
+      <line x1="4" y1="134" x2="296" y2="134" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- PATTY -->
+      <text x="4"   y="150" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">PATTY</text>
+      <text x="156" y="150" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">PATTY</text>
+      <text x="4"   y="168" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50">Daging giling segar</text>
+      <text x="156" y="168" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722">Campuran + pengisi</text>
+      <line x1="4" y1="180" x2="296" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- ROTI -->
+      <text x="4"   y="196" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">ROTI</text>
+      <text x="156" y="196" font-family="DM Sans,sans-serif" font-size="10" fill="#6b6760" font-weight="700" letter-spacing="0.1em">ROTI</text>
+      <text x="4"   y="214" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50">Gandum utuh</text>
+      <text x="156" y="214" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722">Tepung putih + DATEM</text>
+      <line x1="4" y1="226" x2="296" y2="226" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- Kesimpulan -->
+      <rect x="4"   y="238" width="140" height="46" rx="8" fill="rgba(60,180,80,0.1)" stroke="rgba(60,180,80,0.25)" stroke-width="1.5"/>
+      <text x="74"  y="258" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50" text-anchor="middle" font-weight="600">✓ Rendah aditif</text>
+      <text x="74"  y="276" font-family="DM Sans,sans-serif" font-size="11" fill="#4caf50" text-anchor="middle" font-weight="600">&amp; natrium</text>
+      <rect x="156" y="238" width="140" height="46" rx="8" fill="rgba(232,119,34,0.1)" stroke="rgba(232,119,34,0.25)" stroke-width="1.5"/>
+      <text x="226" y="258" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722" text-anchor="middle" font-weight="600">Ultra-processed</text>
+      <text x="226" y="276" font-family="DM Sans,sans-serif" font-size="11" fill="#e87722" text-anchor="middle" font-weight="600">food (NOVA)</text>
+    </svg>
+  </div>
+
+  <p class="reveal">Klasifikasi NOVA — sistem pengelompokan makanan dari Universitas São Paulo — menempatkan sebagian besar komponen burger restoran cepat saji dalam kategori <em>ultra-processed food</em>. Studi dalam <em>BMJ</em> (2019) yang mengikuti lebih dari 100.000 orang dewasa menemukan peningkatan konsumsi UPF sebesar 10% berhubungan dengan peningkatan risiko kardiovaskular secara signifikan.</p>
+
+  <!-- S4: PORSI -->
+  <h2 class="section-heading reveal">
+    <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#e87722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg></span>
+    Masalah Keempat: Porsi yang Terdistorsi
+  </h2>
+
+  <p class="reveal">Ada satu faktor yang sering luput: kita sudah tidak tahu berapa porsi yang "normal". Industri makanan cepat saji secara sistematis memperbesar ukuran sajian sejak 1970-an — strategi yang terbukti meningkatkan konsumsi dan keuntungan.</p>
+  <p class="reveal">Penelitian dari NHLBI menunjukkan burger tahun 1950-an rata-rata berbobot ~170 gram. Kini, burger "reguler" sudah mencapai 200–300 gram. Yang lebih mengkhawatirkan: riset psikologi perilaku menemukan manusia cenderung menghabiskan makanan sebanyak yang tersaji karena sinyal kenyang membutuhkan ~20 menit untuk sampai ke otak.</p>
+
+  <div class="highlight-box reveal">
+    <h4>Efek Psikologis</h4>
+    <p>Kita tidak sekadar makan lebih banyak karena lapar lebih. <strong>Kita makan lebih banyak karena disajikan lebih banyak</strong> — dan otak kita sudah menormalisasi ukuran tersebut sebagai "standar."</p>
+  </div>
+
+  <!-- PENUTUP -->
+  <h2 class="section-heading reveal">
+    <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#e87722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+    Jadi, Burger Sehat Itu Mungkin?
+  </h2>
+
+  <p class="reveal">Mungkin — dan justru di sinilah inti dari seluruh pembahasan ini. Tidak ada yang secara inheren "jahat" dari konsep burger. Masalahnya bukan pada burger-nya, melainkan pada <em>bagaimana</em> ia dibuat, dari <em>bahan apa</em>, dan <em>seberapa besar</em> porsinya.</p>
+  <p class="reveal">Burger dari daging segar tanpa lemak berlebih, dipanggang pada suhu moderat, diapit roti gandum utuh, dilengkapi sayuran segar, dan tanpa saus pabrikan — secara gizi jauh berbeda dari burger gerai cepat saji.</p>
+
+  <div class="closing reveal">
+    <h3 class="closing-title">Literasi Gizi, Bukan Larangan Makan</h3>
+    <p>Tujuan dari memahami ini bukan untuk membuat kamu merasa bersalah setiap kali makan burger. Konsumsi sesekali dalam porsi wajar tidak serta-merta merusak kesehatan. Yang berbahaya adalah ketidaktahuan yang membuat konsumsi rutin terasa aman.</p>
+    <p>Ketika kamu tahu bahwa masalahnya ada di proses industri, ukuran porsi, dan metode memasak — bukan pada daging atau roti itu sendiri — kamu memiliki alat untuk membuat pilihan yang lebih baik. Dan itu adalah tujuan dari literasi gizi.</p>
+  </div>
+
+  <div class="sources reveal">
+    <h3>Referensi &amp; Sumber</h3>
+    <ol>
+      <li>Sinha, R., et al. (2009). Meat intake and mortality. <em>Archives of Internal Medicine</em>, 169(6), 562–571.</li>
+      <li>IARC Working Group. (2015). Carcinogenicity of red and processed meat. <em>The Lancet Oncology</em>, 16(16), 1599–1600.</li>
+      <li>Monteiro, C.A., et al. (2019). Ultra-processed foods: what they are. <em>Public Health Nutrition</em>, 22(5), 936–941.</li>
+      <li>Srour, B., et al. (2019). Ultra-processed food and CVD risk. <em>BMJ</em>, 365, l1451.</li>
+      <li>Young, L.R. &amp; Nestle, M. (2002). Expanding portion sizes and US obesity. <em>American Journal of Public Health</em>, 92(2), 246–249.</li>
+      <li>National Heart, Lung, and Blood Institute. (2013). Portion Distortion. U.S. DHHS.</li>
+      <li>World Health Organization. (2018). Healthy diet. <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank">who.int</a></li>
+    </ol>
+  </div>
+
+</div>
+</main>
+
+<script>
+  const savedTheme = localStorage.getItem('kbdi-theme');
+  if (savedTheme === 'light') document.documentElement.classList.add('light');
+
+  fetch('https://edukbdi.github.io/header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('afterbegin', html);
+      const header = document.getElementById('kbdi-header');
+      if (savedTheme === 'light') header.classList.add('kbdi-light');
+      document.getElementById('kbdiThemeToggle').addEventListener('click', function() {
+        const isLight = document.documentElement.classList.toggle('light');
+        header.classList.toggle('kbdi-light', isLight);
+        localStorage.setItem('kbdi-theme', isLight ? 'light' : 'dark');
+        const footer = document.getElementById('kbdi-footer');
+        if (footer) footer.classList.toggle('kbdi-light', isLight);
+      });
+    });
+
+  fetch('https://edukbdi.github.io/footer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('beforeend', html);
+      const footer = document.getElementById('kbdi-footer');
+      if (footer && savedTheme === 'light') footer.classList.add('kbdi-light');
+    });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
